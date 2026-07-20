@@ -1,0 +1,202 @@
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.app-header p {
+  color: var(--text);
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.panel-list {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 720px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Form */
+.expense-form .field {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.expense-form .field-row {
+  display: flex;
+  gap: 12px;
+}
+
+.expense-form .field-row .field {
+  flex: 1;
+}
+
+.expense-form label {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.expense-form input,
+.expense-form select {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+}
+
+.expense-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.expense-form button:hover {
+  opacity: 0.9;
+}
+
+/* Empty state */
+.empty {
+  color: var(--text);
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Summary / bar chart */
+.summary-total {
+  text-align: left;
+  margin-bottom: 16px;
+  color: var(--text-h);
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.bar-label {
+  font-size: 13px;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bar-track {
+  height: 10px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.bar-value {
+  font-size: 12px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+/* Expense list */
+.expense-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.expense-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.expense-description {
+  color: var(--text-h);
+  font-weight: 500;
+}
+
+.expense-meta {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.expense-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.expense-amount {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.remove-button {
+  border: none;
+  background: transparent;
+  color: var(--danger);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.remove-button:hover {
+  opacity: 0.7;
+}
